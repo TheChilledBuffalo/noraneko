@@ -8,6 +8,8 @@ import { initReverseSidebarPosition } from "./reverse-sidebar-position";
 import { initUndoClosedTab } from "./undo-closed-tab";
 import { initPrivateContainer } from "./browser-private-container";
 import { setBrowserInterface } from "./designs/configs";
+import { initFloorpLocationChange } from "./location-change";
+import { initSplitView } from "./browser-split-view";
 
 export default function initScripts() {
   //@ts-expect-error ii
@@ -30,6 +32,8 @@ export default function initScripts() {
     console.log("csk getinstance");
     CustomShortcutKey.getInstance();
     initSidebar();
+    initFloorpLocationChange();
+    initSplitView();
 
     window.gFloorp = {
       design: {
